@@ -6,8 +6,9 @@ class App < Sinatra::Base
   end
 
   post '/reverse' do
-    erb :reversed
-    og_string = params
+    og_string = params[:string]
+    rever_string = og_string.reverse
+     erb :reversed
   end
 
   get '/friends' do
